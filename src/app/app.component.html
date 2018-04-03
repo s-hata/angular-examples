@@ -1,0 +1,12 @@
+<mat-sidenav-container class="global-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')" role="navigation">
+    Navigation
+  </mat-sidenav>
+  <mat-sidenav-content role="main" class="main-container">
+    <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+    <p>Events:</p>
+    <div class="example-events">
+      <div *ngFor="let e of events">{{e}}</div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

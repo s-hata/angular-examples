@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.global-container {
+  height: 100%;
+}
+
+.main-container {
+  min-height: 100%;
+}
+
+header {
+  @media #{only screen and (max-width:600px)} {
+    height: 56px;
+  }
+
+  @media #{only screen and (min-width:601px)} {
+    height: 64px;
+  }
+}
+
+main.main-container {
+  ng-component {
+    display: block;
+  }
+}
+
+footer {
+  height: 64px;
+}
+
+mat-sidenav {
+  width: 250px;
+}
